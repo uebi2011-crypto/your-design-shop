@@ -28,11 +28,53 @@ function selectProduct(productName) {
 
     productSelect.value = productName;
 
+    updatePositions();
+
     document
         .getElementById("custom")
         .scrollIntoView({
             behavior: "smooth"
         });
+
+}
+
+
+/* =========================
+   DRUCKPOSITIONEN ANPASSEN
+========================= */
+
+function updatePositions() {
+
+    const product =
+        document.getElementById("product").value;
+
+    const positionSelect =
+        document.getElementById("position");
+
+
+    positionSelect.innerHTML = "";
+
+
+    if (product === "Cap") {
+
+        positionSelect.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Vorne">Vorne</option>
+            <option value="Seite">Seite</option>
+            <option value="Hinten">Hinten</option>
+        `;
+
+    } else {
+
+        positionSelect.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Brust vorne">Brust vorne</option>
+            <option value="Groß vorne">Groß vorne</option>
+            <option value="Rücken">Rücken</option>
+            <option value="Ärmel">Ärmel</option>
+        `;
+
+    }
 
 }
 
@@ -48,6 +90,7 @@ function showFileName() {
 
     const fileName =
         document.getElementById("fileName");
+
 
     if (input.files.length > 0) {
 
@@ -113,10 +156,6 @@ function submitOrder(event) {
     }
 
 
-    /*
-       E-MAIL-ADRESSE
-    */
-
     const emailAddress =
         "uebi2011@gmail.com";
 
@@ -151,10 +190,6 @@ function submitOrder(event) {
         );
 
 
-    /*
-       E-MAIL-PROGRAMM ÖFFNEN
-    */
-
     window.location.href =
         "mailto:" +
         emailAddress +
@@ -163,10 +198,6 @@ function submitOrder(event) {
         "&body=" +
         body;
 
-
-    /*
-       HINWEIS
-    */
 
     setTimeout(function() {
 
@@ -178,6 +209,15 @@ function submitOrder(event) {
     }, 500);
 
 }
+
+
+/* =========================
+   PRODUKT-WECHSEL ÜBERWACHEN
+========================= */
+
+document
+    .getElementById("product")
+    .addEventListener("change", updatePositions);
 
 
 /* =========================
