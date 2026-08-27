@@ -126,7 +126,7 @@ function submitOrder(event) {
 
 
     const emailAddress =
-        "DEINE-EMAIL@BEISPIEL.AT";
+        "uebi2011@gmail.com";
 
 
     const subject =
