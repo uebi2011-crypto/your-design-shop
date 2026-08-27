@@ -114,16 +114,8 @@ function submitOrder(event) {
 
 
     /*
-       TEMPORÄRE LÖSUNG
-
-       Da GitHub Pages keine Datenbank
-       und kein Backend bereitstellt,
-       erstellen wir zunächst eine
-       E-Mail-Anfrage.
-
-       Deine E-Mail unten ersetzen!
+       E-MAIL-ADRESSE
     */
-
 
     const emailAddress =
         "uebi2011@gmail.com";
@@ -160,7 +152,7 @@ function submitOrder(event) {
 
 
     /*
-       E-Mail-Programm öffnen
+       E-MAIL-PROGRAMM ÖFFNEN
     */
 
     window.location.href =
@@ -173,7 +165,7 @@ function submitOrder(event) {
 
 
     /*
-       Hinweis
+       HINWEIS
     */
 
     setTimeout(function() {
