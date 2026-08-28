@@ -336,15 +336,19 @@
                     </div>
 
 
-                    <form id="orderForm" onsubmit="submitOrder(event)">
-
+                    <form   
+                        id="orderForm"
+                        action="https://formspree.io/f/xqpkkwak
+                         method="POST"
+                         enctype="multipart/form-data"
+                      
                         <div class="form-group">
 
                             <label for="product">
                                 Produkt
                             </label>
 
-                            <select id="product" required>
+                             <select id="product" name="product" required>
 
                                 <option value="">
                                     Bitte auswählen
@@ -379,7 +383,7 @@
                                     Farbe
                                 </label>
 
-                                <select id="color" required>
+                             <select id="color" name="color" required>
 
                                     <option value="">
                                         Farbe wählen
@@ -402,7 +406,7 @@
                                     Größe
                                 </label>
 
-                                <select id="size" required>
+                                 <select id="size" name="size" required>
 
                                     <option value="">
                                         Größe wählen
@@ -428,7 +432,7 @@
                                 Druckposition
                             </label>
 
-                            <select id="position" required>
+                             <select id="position" name="position" required>
 
                                 <option value="">
                                     Position wählen
@@ -476,11 +480,12 @@
                             </label>
 
                             <input
-                                type="file"
+                              type="file"
                                 id="designFile"
-                                accept=".png,.jpg,.jpeg,.svg,.pdf"
-                                onchange="showFileName()"
-                                required>
+                                name="design"
+                                 accept=".png,.jpg,.jpeg,.svg,.pdf"
+                                 onchange="showFileName()"
+                                 required>  
 
                         </div>
 
@@ -494,6 +499,7 @@
                             <input
                                 type="number"
                                 id="quantity"
+                                name="quantity"
                                 min="1"
                                 value="1"
                                 required>
@@ -512,6 +518,7 @@
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     placeholder="Dein Name"
                                     required>
 
@@ -527,6 +534,7 @@
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     placeholder="deine@email.at"
                                     required>
 
@@ -543,6 +551,7 @@
 
                             <textarea
                                 id="message"
+                                name="message"
                                 rows="4"
                                 placeholder="Wie soll dein Design aussehen?"></textarea>
 
