@@ -40,7 +40,7 @@ function selectProduct(productName) {
 
 
 /* =========================
-   DRUCKPOSITIONEN ANPASSEN
+   DRUCKPOSITIONEN
 ========================= */
 
 function updatePositions() {
@@ -109,115 +109,15 @@ function showFileName() {
 
 
 /* =========================
-   FORMULAR ABSENDEN
-========================= */
-
-function submitOrder(event) {
-
-    event.preventDefault();
-
-
-    const product =
-        document.getElementById("product").value;
-
-    const color =
-        document.getElementById("color").value;
-
-    const size =
-        document.getElementById("size").value;
-
-    const position =
-        document.getElementById("position").value;
-
-    const quantity =
-        document.getElementById("quantity").value;
-
-    const name =
-        document.getElementById("name").value;
-
-    const email =
-        document.getElementById("email").value;
-
-    const message =
-        document.getElementById("message").value;
-
-
-    const file =
-        document.getElementById("designFile").files[0];
-
-
-    let fileName = "Keine Datei";
-
-
-    if (file) {
-
-        fileName = file.name;
-
-    }
-
-
-    const emailAddress =
-        "uebi2011@gmail.com";
-
-
-    const subject =
-        encodeURIComponent(
-            "Neue PrintX Anfrage – " + product
-        );
-
-
-    const body =
-        encodeURIComponent(
-
-            "Hallo PrintX,\n\n" +
-
-            "ich möchte folgendes bestellen:\n\n" +
-
-            "Produkt: " + product + "\n" +
-            "Farbe: " + color + "\n" +
-            "Größe: " + size + "\n" +
-            "Druckposition: " + position + "\n" +
-            "Anzahl: " + quantity + "\n\n" +
-
-            "Name: " + name + "\n" +
-            "E-Mail: " + email + "\n\n" +
-
-            "Design-Datei: " + fileName + "\n\n" +
-
-            "Nachricht:\n" +
-            message
-
-        );
-
-
-    window.location.href =
-        "mailto:" +
-        emailAddress +
-        "?subject=" +
-        subject +
-        "&body=" +
-        body;
-
-
-    setTimeout(function() {
-
-        alert(
-            "Deine Anfrage wurde vorbereitet. " +
-            "Bitte sende die E-Mail in deinem E-Mail-Programm ab."
-        );
-
-    }, 500);
-
-}
-
-
-/* =========================
-   PRODUKT-WECHSEL ÜBERWACHEN
+   PRODUKT-WECHSEL
 ========================= */
 
 document
     .getElementById("product")
-    .addEventListener("change", updatePositions);
+    .addEventListener(
+        "change",
+        updatePositions
+    );
 
 
 /* =========================
