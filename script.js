@@ -5,56 +5,16 @@
 
 
 /* =========================
-   WENN SEITE GELADEN IST
-========================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const product =
-        document.getElementById("product");
-
-    if (product) {
-
-        product.addEventListener(
-            "change",
-            updatePositions
-        );
-
-    }
-
-
-    const links =
-        document.querySelectorAll(".nav-links a");
-
-    links.forEach(function (link) {
-
-        link.addEventListener(
-            "click",
-            function () {
-
-                const nav =
-                    document.querySelector(".nav-links");
-
-                nav.classList.remove("active");
-
-            }
-        );
-
-    });
-
-});
-
-
-/* =========================
    MOBILE MENU
 ========================= */
 
 function toggleMenu() {
 
-    const nav =
-        document.querySelector(".nav-links");
+    const nav = document.querySelector(".nav-links");
 
-    nav.classList.toggle("active");
+    if (nav) {
+        nav.classList.toggle("active");
+    }
 
 }
 
@@ -68,21 +28,24 @@ function selectProduct(productName) {
     const productSelect =
         document.getElementById("product");
 
+    if (!productSelect) {
+        return;
+    }
 
-    productSelect.value =
-        productName;
-
+    productSelect.value = productName;
 
     updatePositions();
-
 
     const custom =
         document.getElementById("custom");
 
+    if (custom) {
 
-    custom.scrollIntoView({
-        behavior: "smooth"
-    });
+        custom.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
 
 }
 
@@ -94,158 +57,90 @@ function selectProduct(productName) {
 function updatePositions() {
 
     const product =
-        document.getElementById("product").value;
+        document.getElementById("product");
 
-
-    const positionSelect =
+    const position =
         document.getElementById("position");
 
 
-    if (!positionSelect) {
+    if (!product || !position) {
         return;
     }
 
 
-    positionSelect.innerHTML = "";
+    position.innerHTML = "";
 
 
     /* CAP */
 
-    if (product === "Cap") {
+    if (product.value === "Cap") {
 
-        positionSelect.innerHTML = `
-
-            <option value="">
-                Position wählen
-            </option>
-
-            <option value="Vorne">
-                Vorne
-            </option>
-
-            <option value="Seite">
-                Seite
-            </option>
-
-            <option value="Hinten">
-                Hinten
-            </option>
-
+        position.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Vorne">Vorne</option>
+            <option value="Seite">Seite</option>
+            <option value="Hinten">Hinten</option>
         `;
-
-        return;
 
     }
 
 
     /* T-SHIRT */
 
-    if (product === "T-Shirt") {
+    else if (product.value === "T-Shirt") {
 
-        positionSelect.innerHTML = `
-
-            <option value="">
-                Position wählen
-            </option>
-
-            <option value="Brust vorne">
-                Brust vorne
-            </option>
-
-            <option value="Groß vorne">
-                Groß vorne
-            </option>
-
-            <option value="Rücken">
-                Rücken
-            </option>
-
-            <option value="Ärmel">
-                Ärmel
-            </option>
-
+        position.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Brust vorne">Brust vorne</option>
+            <option value="Groß vorne">Groß vorne</option>
+            <option value="Rücken">Rücken</option>
+            <option value="Ärmel">Ärmel</option>
         `;
-
-        return;
 
     }
 
 
     /* HOODIE */
 
-    if (product === "Hoodie") {
+    else if (product.value === "Hoodie") {
 
-        positionSelect.innerHTML = `
-
-            <option value="">
-                Position wählen
-            </option>
-
-            <option value="Brust vorne">
-                Brust vorne
-            </option>
-
-            <option value="Groß vorne">
-                Groß vorne
-            </option>
-
-            <option value="Rücken">
-                Rücken
-            </option>
-
-            <option value="Ärmel">
-                Ärmel
-            </option>
-
+        position.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Brust vorne">Brust vorne</option>
+            <option value="Groß vorne">Groß vorne</option>
+            <option value="Rücken">Rücken</option>
+            <option value="Ärmel">Ärmel</option>
         `;
-
-        return;
 
     }
 
 
     /* PULLOVER */
 
-    if (product === "Pullover") {
+    else if (product.value === "Pullover") {
 
-        positionSelect.innerHTML = `
-
-            <option value="">
-                Position wählen
-            </option>
-
-            <option value="Brust vorne">
-                Brust vorne
-            </option>
-
-            <option value="Groß vorne">
-                Groß vorne
-            </option>
-
-            <option value="Rücken">
-                Rücken
-            </option>
-
-            <option value="Ärmel">
-                Ärmel
-            </option>
-
+        position.innerHTML = `
+            <option value="">Position wählen</option>
+            <option value="Brust vorne">Brust vorne</option>
+            <option value="Groß vorne">Groß vorne</option>
+            <option value="Rücken">Rücken</option>
+            <option value="Ärmel">Ärmel</option>
         `;
-
-        return;
 
     }
 
 
     /* KEIN PRODUKT */
 
-    positionSelect.innerHTML = `
+    else {
 
-        <option value="">
-            Erst Produkt auswählen
-        </option>
+        position.innerHTML = `
+            <option value="">
+                Erst Produkt auswählen
+            </option>
+        `;
 
-    `;
+    }
 
 }
 
@@ -259,7 +154,6 @@ function showFileName() {
     const input =
         document.getElementById("designFile");
 
-
     const fileName =
         document.getElementById("fileName");
 
@@ -271,17 +165,14 @@ function showFileName() {
 
     if (input.files.length > 0) {
 
-        const file =
-            input.files[0];
-
-
         fileName.textContent =
             "✓ " +
-            file.name +
+            input.files[0].name +
             " – bitte im E-Mail-Fenster als Anhang hinzufügen.";
 
+    }
 
-    } else {
+    else {
 
         fileName.textContent =
             "Optional – du kannst auch ohne Datei fortfahren.";
@@ -289,6 +180,50 @@ function showFileName() {
     }
 
 }
+
+
+/* =========================
+   PRODUKT-WECHSEL
+========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const product =
+        document.getElementById("product");
+
+
+    if (product) {
+
+        product.addEventListener(
+            "change",
+            updatePositions
+        );
+
+    }
+
+
+    /* Navigation schließen */
+
+    const links =
+        document.querySelectorAll(".nav-links a");
+
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            const nav =
+                document.querySelector(".nav-links");
+
+            if (nav) {
+                nav.classList.remove("active");
+            }
+
+        });
+
+    });
+
+});
 
 
 /* =========================
@@ -300,41 +235,34 @@ function submitOrder(event) {
     event.preventDefault();
 
 
-    /* =====================
-       DATEN AUSLESEN
-    ===================== */
+    /* Daten */
 
     const product =
-        document.getElementById("product").value;
-
+        document.getElementById("product")?.value || "";
 
     const color =
-        document.getElementById("color").value;
-
+        document.getElementById("color")?.value || "";
 
     const size =
-        document.getElementById("size").value;
-
+        document.getElementById("size")?.value || "";
 
     const position =
-        document.getElementById("position").value;
-
+        document.getElementById("position")?.value || "";
 
     const quantity =
-        document.getElementById("quantity").value;
-
+        document.getElementById("quantity")?.value || "";
 
     const name =
-        document.getElementById("name").value;
+        document.getElementById("name")?.value || "";
 
-
-    const customerEmail =
-        document.getElementById("email").value;
-
+    const email =
+        document.getElementById("email")?.value || "";
 
     const message =
-        document.getElementById("message").value;
+        document.getElementById("message")?.value || "";
 
+
+    /* Datei */
 
     const fileInput =
         document.getElementById("designFile");
@@ -352,33 +280,31 @@ function submitOrder(event) {
         fileText =
             fileInput.files[0].name +
             "\n\n" +
-            "WICHTIG: Bitte diese Datei im " +
-            "E-Mail-Fenster als Anhang hinzufügen.";
+            "WICHTIG: Bitte die ausgewählte " +
+            "Datei im E-Mail-Fenster manuell " +
+            "als Anhang hinzufügen.";
 
     }
 
 
-    /* =====================
-       E-MAIL
-    ===================== */
+    /* E-Mail */
 
     const receiver =
         "uebi2011@gmail.com";
 
 
     const subject =
-        "PrintX Anfrage – " +
-        product;
+        "PrintX Anfrage - " +
+        (product || "Neue Anfrage");
 
 
     const body =
 
         "Hallo PrintX,\n\n" +
 
-        "ich möchte gerne eine Anfrage " +
-        für folgende Bestellung senden:\n\n" +
+        "ich möchte folgende Anfrage senden:\n\n" +
 
-        "==============================\n" +
+        "--------------------------------\n" +
 
         "BESTELLUNG\n\n" +
 
@@ -402,7 +328,7 @@ function submitOrder(event) {
         quantity +
         "\n\n" +
 
-        "==============================\n" +
+        "--------------------------------\n" +
 
         "KUNDE\n\n" +
 
@@ -411,51 +337,41 @@ function submitOrder(event) {
         "\n" +
 
         "E-Mail: " +
-        customerEmail +
+        email +
         "\n\n" +
 
-        "==============================\n" +
+        "--------------------------------\n" +
 
         "DESIGN\n\n" +
 
         fileText +
         "\n\n" +
 
-        "==============================\n" +
+        "--------------------------------\n" +
 
         "NACHRICHT\n\n" +
 
         (
-            message.trim() !== ""
+            message.trim()
                 ? message
                 : "Keine zusätzliche Nachricht."
         ) +
 
         "\n\n" +
 
-        "==============================\n\n" +
+        "--------------------------------\n\n" +
 
         "Vielen Dank!";
 
 
-    /* =====================
-       MAILTO
-    ===================== */
+    /* E-Mail-Fenster öffnen */
 
-    const mailto =
+    window.location.href =
         "mailto:" +
         receiver +
         "?subject=" +
         encodeURIComponent(subject) +
         "&body=" +
         encodeURIComponent(body);
-
-
-    /*
-       E-MAIL-PROGRAMM ÖFFNEN
-    */
-
-    window.location.href =
-        mailto;
 
 }
