@@ -1,772 +1,797 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>PrintX – Dein Design. Dein Style.</title>
 
-    <meta name="description" content="PrintX – Individuelle T-Shirts, Hoodies und Caps mit deinem eigenen Design.">
+    <link
+        rel="stylesheet"
+        href="style.css">
 
-    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
-    <header class="navbar">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-        <a href="#home" class="logo">
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a
+            href="#home"
+            class="logo">
+
             PRINT<span>X</span>
+
         </a>
+
 
         <nav class="nav-links">
-            <a href="#home">Start</a>
-            <a href="#shop">Shop</a>
-            <a href="#custom">Eigenes Design</a>
-            <a href="#business">Firmen & Vereine</a>
-            <a href="#about">Über uns</a>
-            <a href="#contact">Kontakt</a>
+
+            <a href="#home">
+                Startseite
+            </a>
+
+            <a href="#products">
+                Produkte
+            </a>
+
+            <a href="#custom">
+                Anfrage
+            </a>
+
+            <a href="mailto:uebi2011@gmail.com">
+                Kontakt
+            </a>
+
         </nav>
 
-        <a href="#custom" class="nav-button">
-            Design erstellen
-        </a>
 
-        <button class="menu-button" onclick="toggleMenu()">
+        <button
+            class="menu-button"
+            onclick="toggleMenu()">
+
             ☰
+
         </button>
 
-    </header>
+    </div>
+
+</header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
 
-    <main>
+<!-- =========================
+     HERO
+========================= -->
 
-        <section id="home" class="hero">
+<section
+    id="home"
+    class="hero">
 
-            <div class="hero-content">
+    <div class="container hero-content">
 
-                <div class="hero-label">
-                    CUSTOM PRINTING • PRINTX
-                </div>
+        <div class="hero-text">
 
-                <h1>
-                    DEIN DESIGN.<br>
-                    <span>DEIN STYLE.</span>
-                </h1>
+            <span class="hero-small">
+                PRINTX CUSTOM
+            </span>
 
-                <p>
-                    Du hast ein eigenes Logo, Bild oder Motiv?
-                    Wir bringen dein Design auf T-Shirts, Hoodies,
-                    Caps und mehr.
-                </p>
+            <h1>
+                DEIN DESIGN.
+                <br>
+                DEIN STYLE.
+            </h1>
 
-                <div class="hero-buttons">
+            <p>
+                Wir bedrucken T-Shirts, Hoodies, Caps
+                und mehr nach deinen Vorstellungen.
+            </p>
 
-                    <a href="#custom" class="button primary">
-                        Eigenes Design bestellen
-                    </a>
+            <div class="hero-buttons">
 
-                    <a href="#shop" class="button secondary">
-                        Produkte ansehen
-                    </a>
+                <a
+                    href="#custom"
+                    class="button primary">
 
-                </div>
+                    Jetzt anfragen →
 
-                <div class="hero-features">
+                </a>
 
-                    <div>
-                        <strong>01</strong>
-                        <span>Design hochladen</span>
-                    </div>
+                <a
+                    href="#products"
+                    class="button secondary">
 
-                    <div>
-                        <strong>02</strong>
-                        <span>Produkt auswählen</span>
-                    </div>
+                    Produkte ansehen
 
-                    <div>
-                        <strong>03</strong>
-                        <span>Wir drucken</span>
-                    </div>
+                </a>
 
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-card">
+
+                <div class="hero-shirt">
+                    PRINTX
                 </div>
 
             </div>
 
-            <div class="hero-product">
+        </div>
 
-                <div class="shirt-shadow"></div>
+    </div>
 
-                <div class="shirt">
-                    <div class="shirt-print">
-                        PRINT<span>X</span>
-                    </div>
-                </div>
-
-                <div class="floating-card">
-                    <span>YOUR DESIGN</span>
-                    <strong>PRINTX</strong>
-                </div>
-
-            </div>
-
-        </section>
+</section>
 
 
-        <!-- =========================
-             SHOP
-        ========================== -->
 
-        <section id="shop" class="section">
+<!-- =========================
+     PRODUKTE
+========================= -->
 
-            <div class="section-heading">
+<section
+    id="products"
+    class="products-section">
 
-                <div>
-                    <span class="small-title">UNSERE PRODUKTE</span>
+    <div class="container">
 
-                    <h2>
-                        Mach es <span>zu deinem.</span>
-                    </h2>
-                </div>
+        <div class="section-header">
 
-                <p>
-                    Wähle dein Lieblingsprodukt und
-                    personalisiere es mit deinem eigenen Design.
-                </p>
+            <span>
+                PRINTX COLLECTION
+            </span>
 
-            </div>
+            <h2>
+                Unsere Produkte
+            </h2>
+
+            <p>
+                Wähle dein Produkt und sende uns
+                deine individuelle Anfrage.
+            </p>
+
+        </div>
 
 
-            <div class="products">
+        <div class="products-grid">
 
-                <!-- T-Shirt -->
 
-                <div class="product-card">
+            <!-- T-SHIRT -->
 
-                    <div class="product-image tshirt-image">
-                        <div class="mock-shirt">
-                            <div>PRINT<span>X</span></div>
-                        </div>
+            <div class="product-card">
+
+                <div class="product-image tshirt-image">
+
+                    <div class="shirt-shape">
+                        PRINTX
                     </div>
 
-                    <div class="product-info">
+                </div>
 
-                        <div>
-                            <h3>Custom T-Shirt</h3>
-                            <p>100 % Baumwolle</p>
-                        </div>
+                <div class="product-info">
 
-                        <strong>ab 24,90 €</strong>
+                    <h3>
+                        T-Shirt
+                    </h3>
 
-                    </div>
+                    <p>
+                        Dein individuelles T-Shirt
+                        mit deinem eigenen Design.
+                    </p>
 
                     <button
                         class="product-button"
                         onclick="selectProduct('T-Shirt')">
-                        Eigenes Design
+
+                        T-Shirt auswählen →
+
                     </button>
 
                 </div>
 
+            </div>
 
-                <!-- Hoodie -->
 
-                <div class="product-card">
 
-                    <div class="product-image hoodie-image">
-                        <div class="mock-hoodie">
-                            <div>PRINT<span>X</span></div>
-                        </div>
+            <!-- HOODIE -->
+
+            <div class="product-card">
+
+                <div class="product-image hoodie-image">
+
+                    <div class="hoodie-shape">
+                        PRINTX
                     </div>
 
-                    <div class="product-info">
+                </div>
 
-                        <div>
-                            <h3>Custom Hoodie</h3>
-                            <p>Premium Baumwolle</p>
-                        </div>
+                <div class="product-info">
 
-                        <strong>ab 44,90 €</strong>
+                    <h3>
+                        Hoodie
+                    </h3>
 
-                    </div>
+                    <p>
+                        Bequemer Hoodie mit deinem
+                        persönlichen Druck.
+                    </p>
 
                     <button
                         class="product-button"
                         onclick="selectProduct('Hoodie')">
-                        Eigenes Design
+
+                        Hoodie auswählen →
+
                     </button>
 
                 </div>
 
+            </div>
 
-                <!-- Cap -->
 
-                <div class="product-card">
 
-                    <div class="product-image cap-image">
-                        <div class="mock-cap">
-                            <div>PX</div>
-                        </div>
+            <!-- CAP -->
+
+            <div class="product-card">
+
+                <div class="product-image cap-image">
+
+                    <div class="cap-shape">
+                        PRINTX
                     </div>
 
-                    <div class="product-info">
+                </div>
 
-                        <div>
-                            <h3>Custom Cap</h3>
-                            <p>Individuell bedruckt</p>
-                        </div>
+                <div class="product-info">
 
-                        <strong>ab 19,90 €</strong>
+                    <h3>
+                        Cap
+                    </h3>
 
-                    </div>
+                    <p>
+                        Deine individuelle Cap
+                        mit eigenem Logo oder Design.
+                    </p>
 
                     <button
                         class="product-button"
                         onclick="selectProduct('Cap')">
-                        Eigenes Design
+
+                        Cap auswählen →
+
                     </button>
 
                 </div>
 
+            </div>
 
-                <!-- Pullover -->
 
-                <div class="product-card">
 
-                    <div class="product-image sweater-image">
-                        <div class="mock-sweater">
-                            <div>PRINT<span>X</span></div>
-                        </div>
+            <!-- PULLOVER -->
+
+            <div class="product-card">
+
+                <div class="product-image pullover-image">
+
+                    <div class="pullover-shape">
+                        PRINTX
                     </div>
 
-                    <div class="product-info">
+                </div>
 
-                        <div>
-                            <h3>Custom Pullover</h3>
-                            <p>Comfort Fit</p>
-                        </div>
+                <div class="product-info">
 
-                        <strong>ab 39,90 €</strong>
+                    <h3>
+                        Pullover
+                    </h3>
 
-                    </div>
+                    <p>
+                        Individueller Pullover
+                        für deinen eigenen Style.
+                    </p>
 
                     <button
                         class="product-button"
                         onclick="selectProduct('Pullover')">
-                        Eigenes Design
+
+                        Pullover auswählen →
+
                     </button>
 
                 </div>
 
             </div>
 
-        </section>
 
-
-        <!-- =========================
-             CUSTOM DESIGN
-        ========================== -->
-
-        <section id="custom" class="custom-section">
-
-            <div class="custom-container">
-
-                <div class="custom-text">
-
-                    <span class="small-title">
-                        DEIN PROJEKT
-                    </span>
-
-                    <h2>
-                        Erstelle dein<br>
-                        <span>eigenes Design.</span>
-                    </h2>
-
-                    <p>
-                        Schick uns dein Motiv und sag uns,
-                        was du möchtest. Wir kümmern uns um den Rest.
-                    </p>
-
-                    <div class="steps">
-
-                        <div class="step">
-                            <span>01</span>
-                            <div>
-                                <h3>Produkt auswählen</h3>
-                                <p>T-Shirt, Hoodie, Cap oder Pullover.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <span>02</span>
-                            <div>
-                                <h3>Design hochladen</h3>
-                                <p>Logo, Bild oder eigenes Motiv.</p>
-                            </div>
-                        </div>
-
-                        <div class="step">
-                            <span>03</span>
-                            <div>
-                                <h3>Anfrage abschicken</h3>
-                                <p>Wir melden uns bei dir.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- FORMULAR -->
-
-                <div class="custom-form">
-
-                    <div class="form-header">
-                        <span>PRINTX CUSTOM</span>
-                        <h3>Deine Anfrage</h3>
-                    </div>
-
-
-                <form id="orderForm" onsubmit="submitOrder(event)">  
-                       
-                      
-                        <div class="form-group">
-
-                            <label for="product">
-                                Produkt
-                            </label>
-
-                             <select id="product" name="product" required>
-
-                                <option value="">
-                                    Bitte auswählen
-                                </option>
-
-                                <option value="T-Shirt">
-                                    T-Shirt
-                                </option>
-
-                                <option value="Hoodie">
-                                    Hoodie
-                                </option>
-
-                                <option value="Cap">
-                                    Cap
-                                </option>
-
-                                <option value="Pullover">
-                                    Pullover
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="form-row">
-
-                            <div class="form-group">
-
-                                <label for="color">
-                                    Farbe
-                                </label>
-
-                             <select id="color" name="color" required>
-
-                                    <option value="">
-                                        Farbe wählen
-                                    </option>
-
-                                    <option>Schwarz</option>
-                                    <option>Weiß</option>
-                                    <option>Grau</option>
-                                    <option>Navy</option>
-                                    <option>Rot</option>
-
-                                </select>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="size">
-                                    Größe
-                                </label>
-
-                                 <select id="size" name="size" required>
-
-                                    <option value="">
-                                        Größe wählen
-                                    </option>
-
-                                    <option>XS</option>
-                                    <option>S</option>
-                                    <option>M</option>
-                                    <option>L</option>
-                                    <option>XL</option>
-                                    <option>XXL</option>
-
-                                </select>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="position">
-                                Druckposition
-                            </label>
-
-                             <select id="position" name="position" required>
-
-                                <option value="">
-                                    Position wählen
-                                </option>
-
-                                <option>Brust vorne</option>
-                                <option>Groß vorne</option>
-                                <option>Rücken</option>
-                                <option>Ärmel</option>
-
-                            </select>
-
-                        </div>
-
-
-                        <!-- UPLOAD -->
-
-                        <div class="form-group">
-
-                            <label>
-                                Dein Design
-                            </label>
-
-                            <label
-                                class="upload-box"
-                                for="designFile">
-
-                                <span class="upload-icon">
-                                    ↑
-                                </span>
-
-                                <strong>
-                                    Datei auswählen
-                                </strong>
-
-                                <small>
-                                    PNG, JPG, SVG oder PDF
-                                </small>
-
-                                <span
-                                    id="fileName"
-                                    class="file-name">
-                                </span>
-
-                            </label>
-
-                            <input
-                              type="file"
-                                id="designFile"
-                                name="design"
-                                 accept=".png,.jpg,.jpeg,.svg,.pdf"
-                                 onchange="showFileName()"
-                                 required>  
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="quantity">
-                                Anzahl
-                            </label>
-
-                            <input
-                                type="number"
-                                id="quantity"
-                                name="quantity"
-                                min="1"
-                                value="1"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-row">
-
-                            <div class="form-group">
-
-                                <label for="name">
-                                    Name
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Dein Name"
-                                    required>
-
-                            </div>
-
-
-                            <div class="form-group">
-
-                                <label for="email">
-                                    E-Mail
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="deine@email.at"
-                                    required>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="message">
-                                Nachricht
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="4"
-                                placeholder="Wie soll dein Design aussehen?"></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="submit-button">
-
-                            Anfrage absenden →
-                            
-                        </button>
-
-                        <p class="form-note">
-                            * Noch keine Zahlung. Du bekommst
-                            zuerst ein Angebot von uns.
-                        </p>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             BUSINESS
-        ========================== -->
-
-        <section id="business" class="business-section">
-
-            <div class="business-content">
-
-                <span class="small-title">
-                    FÜR UNTERNEHMEN & VEREINE
-                </span>
-
-                <h2>
-                    Viele Shirts?<br>
-                    <span>Kein Problem.</span>
-                </h2>
-
-                <p>
-                    Wir bedrucken auch größere Mengen für
-                    Vereine, Firmen, Teams, Events und Gruppen.
-                </p>
-
-                <a href="#contact" class="button primary">
-                    Anfrage senden
-                </a>
-
-            </div>
-
-
-            <div class="business-numbers">
-
-                <div>
-                    <strong>10+</strong>
-                    <span>Stück</span>
-                </div>
-
-                <div>
-                    <strong>25+</strong>
-                    <span>Stück</span>
-                </div>
-
-                <div>
-                    <strong>50+</strong>
-                    <span>Stück</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ABOUT
-        ========================== -->
-
-        <section id="about" class="section about-section">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="small-title">
-                        ÜBER PRINTX
-                    </span>
-
-                    <h2>
-                        Dein Motiv.<br>
-                        <span>Unser Druck.</span>
-                    </h2>
-
-                </div>
-
-                <p>
-                    PrintX steht für individuelle Kleidung
-                    mit deinem eigenen Style.
-                </p>
-
-            </div>
-
-
-            <div class="about-grid">
-
-                <div class="about-card">
-                    <span>01</span>
-                    <h3>Individuell</h3>
-                    <p>
-                        Dein Design steht im Mittelpunkt.
-                        Du entscheidest, wie dein Produkt aussieht.
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <span>02</span>
-                    <h3>Modern</h3>
-                    <p>
-                        Wir setzen auf moderne Designs
-                        und hochwertige Produkte.
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <span>03</span>
-                    <h3>Persönlich</h3>
-                    <p>
-                        Keine komplizierte Bestellung.
-                        Du schickst uns deine Idee.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACT
-        ========================== -->
-
-        <section id="contact" class="contact-section">
-
-            <div>
-
-                <span class="small-title">
-                    KONTAKT
-                </span>
-
-                <h2>
-                    Bereit für<br>
-                    <span>dein Design?</span>
-                </h2>
-
-                <p>
-                    Schreib uns und erzähl uns von deinem Projekt.
-                </p>
-
-            </div>
-
-
-            <div class="contact-links">
-
-                <a href="mailto:uebi2011@gmail.com">
-                    📧 E-Mail
-                </a>
-
-                <a
-                    href="https://instagram.com/"
-                    target="_blank">
-                    📱 Instagram
-                </a>
-
-                <a href="#custom">
-                    🎨 Eigenes Design
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="footer-logo">
-            PRINT<span>X</span>
         </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ANFRAGE
+========================= -->
+
+<section
+    id="custom"
+    class="custom-section">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <span>
+                PRINTX CUSTOM
+            </span>
+
+            <h2>
+                Deine Anfrage
+            </h2>
+
+            <p>
+                Fülle das Formular aus und wir melden
+                uns anschließend per E-Mail bei dir.
+            </p>
+
+        </div>
+
+
+
+        <div class="custom-form">
+
+
+            <div class="form-header">
+
+                <span>
+                    PRINTX CUSTOM
+                </span>
+
+                <h3>
+                    Anfrage erstellen
+                </h3>
+
+            </div>
+
+
+
+            <!-- FORMULAR -->
+
+            <form
+                id="orderForm"
+                onsubmit="submitOrder(event)">
+
+
+                <!-- PRODUKT -->
+
+                <div class="form-group">
+
+                    <label for="product">
+                        Produkt
+                    </label>
+
+                    <select
+                        id="product"
+                        name="product"
+                        required>
+
+                        <option value="">
+                            Bitte auswählen
+                        </option>
+
+                        <option value="T-Shirt">
+                            T-Shirt
+                        </option>
+
+                        <option value="Hoodie">
+                            Hoodie
+                        </option>
+
+                        <option value="Cap">
+                            Cap
+                        </option>
+
+                        <option value="Pullover">
+                            Pullover
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- FARBE -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="color">
+                            Farbe
+                        </label>
+
+                        <select
+                            id="color"
+                            name="color"
+                            required>
+
+                            <option value="">
+                                Bitte auswählen
+                            </option>
+
+                            <option value="Schwarz">
+                                Schwarz
+                            </option>
+
+                            <option value="Weiß">
+                                Weiß
+                            </option>
+
+                            <option value="Grau">
+                                Grau
+                            </option>
+
+                            <option value="Rot">
+                                Rot
+                            </option>
+
+                            <option value="Blau">
+                                Blau
+                            </option>
+
+                            <option value="Grün">
+                                Grün
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- GRÖSSE -->
+
+                    <div class="form-group">
+
+                        <label for="size">
+                            Größe
+                        </label>
+
+                        <select
+                            id="size"
+                            name="size"
+                            required>
+
+                            <option value="">
+                                Bitte auswählen
+                            </option>
+
+                            <option value="XS">
+                                XS
+                            </option>
+
+                            <option value="S">
+                                S
+                            </option>
+
+                            <option value="M">
+                                M
+                            </option>
+
+                            <option value="L">
+                                L
+                            </option>
+
+                            <option value="XL">
+                                XL
+                            </option>
+
+                            <option value="XXL">
+                                XXL
+                            </option>
+
+                            <option value="Keine Größe / Cap">
+                                Keine Größe / Cap
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DRUCKPOSITION -->
+
+                <div class="form-group">
+
+                    <label for="position">
+                        Druckposition
+                    </label>
+
+                    <select
+                        id="position"
+                        name="position"
+                        required>
+
+                        <option value="">
+                            Erst Produkt auswählen
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ANZAHL -->
+
+                <div class="form-group">
+
+                    <label for="quantity">
+                        Anzahl
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        value="1"
+                        required>
+
+                </div>
+
+
+
+                <!-- DATEI -->
+
+                <div class="form-group file-group">
+
+                    <label>
+                        Design / Logo
+                    </label>
+
+
+                    <label
+                        for="designFile"
+                        class="file-label">
+
+                        📎 Datei im E-Mail-Fenster anfügen
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="designFile"
+                        accept=".png,.jpg,.jpeg,.svg,.pdf"
+                        onchange="showFileName()">
+
+
+                    <p
+                        id="fileName"
+                        class="file-info">
+
+                        Optional – du kannst auch
+                        ohne Datei fortfahren.
+
+                    </p>
+
+
+                    <p class="file-hint">
+
+                        Die Datei wird nicht automatisch
+                        angehängt. Nachdem du auf
+                        „Anfrage absenden“ klickst,
+                        musst du sie im E-Mail-Fenster
+                        selbst als Anhang hinzufügen.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Dein Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Max Mustermann"
+                        required>
+
+                </div>
+
+
+
+                <!-- E-MAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Deine E-Mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="deine@email.at"
+                        required>
+
+                </div>
+
+
+
+                <!-- NACHRICHT -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Nachricht
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Beschreibe dein gewünschtes Design..."></textarea>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-button">
+
+                    Anfrage absenden →
+
+                </button>
+
+
+                <p class="submit-info">
+
+                    Beim Absenden öffnet sich dein
+                    E-Mail-Programm mit allen
+                    Bestelldaten.
+
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     KONTAKT
+========================= -->
+
+<section class="contact-section">
+
+    <div class="container contact-content">
+
+        <span>
+            NOCH FRAGEN?
+        </span>
+
+        <h2>
+            Schreib uns direkt.
+        </h2>
 
         <p>
-            Dein Design. Dein Style.
+            Wir beantworten deine Anfrage
+            so schnell wie möglich.
         </p>
 
-        <div class="footer-links">
-            <a href="#home">Start</a>
-            <a href="#shop">Shop</a>
-            <a href="#custom">Design</a>
-            <a href="#contact">Kontakt</a>
+        <a
+            href="mailto:uebi2011@gmail.com"
+            class="button primary">
+
+            📧 E-Mail schreiben
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+
+            <div class="logo">
+                PRINT<span>X</span>
+            </div>
+
+            <p>
+                Dein Design. Dein Style.
+            </p>
+
         </div>
 
-        <p class="copyright">
-            © 2026 PrintX. Alle Rechte vorbehalten.
-        </p>
 
-    </footer>
+        <div class="footer-links">
+
+            <a href="#home">
+                Startseite
+            </a>
+
+            <a href="#products">
+                Produkte
+            </a>
+
+            <a href="#custom">
+                Anfrage
+            </a>
+
+            <a href="mailto:uebi2011@gmail.com">
+                Kontakt
+            </a>
+
+        </div>
+
+    </div>
 
 
-    <script src="script.js"></script>
+    <div class="footer-bottom">
+
+        © 2026 PrintX. Alle Rechte vorbehalten.
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
+   
