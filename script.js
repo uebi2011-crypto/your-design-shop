@@ -1,4 +1,3 @@
-
 /* ========================================
    PRINTX
    SCRIPT.JS
@@ -105,6 +104,124 @@ function showFileName() {
         fileName.textContent = "";
 
     }
+
+}
+
+
+/* =========================
+   ANFRAGE PER E-MAIL
+========================= */
+
+function submitOrder(event) {
+
+    event.preventDefault();
+
+
+    /* Bestelldaten */
+
+    const product =
+        document.getElementById("product").value;
+
+    const color =
+        document.getElementById("color").value;
+
+    const size =
+        document.getElementById("size").value;
+
+    const position =
+        document.getElementById("position").value;
+
+    const quantity =
+        document.getElementById("quantity").value;
+
+    const name =
+        document.getElementById("name").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    /* Datei */
+
+    const file =
+        document.getElementById("designFile").files[0];
+
+
+    let fileName = "Keine Datei ausgewählt";
+
+
+    if (file) {
+
+        fileName = file.name;
+
+    }
+
+
+    /* Deine E-Mail */
+
+    const emailAddress =
+        "uebi2011@gmail.com";
+
+
+    /* Betreff */
+
+    const subject =
+        encodeURIComponent(
+            "PrintX Anfrage – " + product
+        );
+
+
+    /* E-Mail-Inhalt */
+
+    const body =
+        encodeURIComponent(
+
+            "Hallo PrintX,\n\n" +
+
+            "ich möchte folgende Bestellung anfragen:\n\n" +
+
+            "━━━━━━━━━━━━━━━━━━━━\n" +
+
+            "PRODUKT\n" +
+            "Produkt: " + product + "\n" +
+            "Farbe: " + color + "\n" +
+            "Größe: " + size + "\n" +
+            "Druckposition: " + position + "\n" +
+            "Anzahl: " + quantity + "\n\n" +
+
+            "KUNDE\n" +
+            "Name: " + name + "\n" +
+            "E-Mail: " + email + "\n\n" +
+
+            "DESIGN\n" +
+            "Datei: " + fileName + "\n\n" +
+
+            "NACHRICHT\n" +
+            message + "\n\n" +
+
+            "━━━━━━━━━━━━━━━━━━━━\n\n" +
+
+            "WICHTIG:\n" +
+            "Bitte füge meine Design-Datei als Anhang " +
+            "zu dieser E-Mail hinzu.\n\n" +
+
+            "Vielen Dank!"
+
+        );
+
+
+    /* E-Mail öffnen */
+
+    window.location.href =
+        "mailto:" +
+        emailAddress +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body;
 
 }
 
