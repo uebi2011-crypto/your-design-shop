@@ -1,2 +1,2 @@
-# your-design-shop
+# Printx
 Meine T-Shirt Druck Website
