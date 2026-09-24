@@ -17,7 +17,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
     color: #111111;
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+:root {
+    --black: #080808;
+    --dark: #111111;
+    --green: #aaff00;
+    --yellow: #e4ff00;
+    --gray: #777777;
+    --light: #f5f5f5;
 }
 
 a {
@@ -39,21 +48,6 @@ textarea {
 
 
 /* ========================================
-   FARBEN
-======================================== */
-
-:root {
-    --black: #090909;
-    --dark: #111111;
-    --gray: #666666;
-    --light-gray: #f4f4f4;
-    --green: #a8ff00;
-    --yellow: #dfff00;
-    --border: #dddddd;
-}
-
-
-/* ========================================
    NAVIGATION
 ======================================== */
 
@@ -61,12 +55,15 @@ textarea {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: #ffffff;
+
     border-bottom: 2px solid var(--green);
 }
 
 .nav-container {
-    min-height: 74px;
+    min-height: 72px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,8 +72,7 @@ textarea {
 .logo {
     font-size: 30px;
     font-weight: 900;
-    letter-spacing: -1px;
-    color: #111111;
+    letter-spacing: -2px;
 }
 
 .logo span {
@@ -86,26 +82,38 @@ textarea {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 32px;
 }
 
 .nav-links a {
-    color: #111111;
     font-size: 15px;
     font-weight: 600;
+
     transition: 0.2s;
 }
 
 .nav-links a:hover {
-    color: #8dcc00;
+    color: #8bcf00;
+}
+
+.nav-button {
+    background: var(--green);
+
+    padding: 11px 19px;
+
+    border-radius: 25px;
+
+    font-weight: 800 !important;
 }
 
 .menu-button {
     display: none;
+
     background: none;
     border: none;
-    color: #111111;
+
     font-size: 28px;
+
     cursor: pointer;
 }
 
@@ -118,12 +126,14 @@ textarea {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+
     padding: 14px 25px;
+
     border-radius: 30px;
+
     font-weight: 800;
+
     transition: 0.2s;
-    cursor: pointer;
 }
 
 .button:hover {
@@ -133,17 +143,11 @@ textarea {
 .primary {
     background: var(--green);
     color: #111111;
-    border: none;
 }
 
 .secondary {
     border: 2px solid #ffffff;
     color: #ffffff;
-}
-
-.secondary:hover {
-    background: #ffffff;
-    color: #111111;
 }
 
 
@@ -152,50 +156,60 @@ textarea {
 ======================================== */
 
 .hero {
-    min-height: 600px;
-    background: var(--black);
-    color: white;
-    display: flex;
-    align-items: center;
+    min-height: 540px;
+
+    background: #080808;
+
+    color: #ffffff;
 }
 
 .hero-content {
+    min-height: 540px;
+
     display: grid;
-    grid-template-columns: 0.9fr 1.3fr;
+    grid-template-columns: 0.85fr 1.4fr;
+
     align-items: center;
-    gap: 40px;
-    padding: 80px 0;
+
+    gap: 30px;
 }
 
 .hero-small {
     font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #ffffff;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
 }
 
 .hero h1 {
-    margin-top: 12px;
-    font-size: clamp(55px, 7vw, 100px);
+    font-size: clamp(60px, 8vw, 105px);
+
     line-height: 0.9;
-    letter-spacing: -5px;
-    color: #ffffff;
+
+    letter-spacing: -6px;
+
+    margin: 12px 0;
 }
 
 .hero h1 span {
     color: var(--green);
 }
 
-.hero p {
+.hero-description {
     max-width: 500px;
-    margin: 28px 0;
+
     color: #dddddd;
+
     font-size: 17px;
+
+    margin: 25px 0;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 14px;
+    gap: 13px;
+
     flex-wrap: wrap;
 }
 
@@ -204,55 +218,82 @@ textarea {
    HERO PRODUKTE
 ======================================== */
 
-.hero-visual {
+.hero-products {
+    height: 400px;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
 
-.hero-card {
-    width: 100%;
-    max-width: 650px;
-    min-height: 390px;
+.hero-products img {
+    position: absolute;
 
-    background: #111111;
-    border-radius: 24px;
+    object-fit: contain;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #252525;
-}
-
-
-/* einfache Produktdarstellung */
-
-.hero-shirt {
-    width: 190px;
-    height: 230px;
-    background: #ffffff;
-    color: #111111;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-weight: 600;
-    font-size: 18px;
-
-    clip-path: polygon(
-        25% 0,
-        0 15%,
-        15% 35%,
-        27% 25%,
-        27% 100%,
-        73% 100%,
-        73% 25%,
-        85% 35%,
-        100% 15%,
-        75% 0
+    filter: drop-shadow(
+        0 15px 20px rgba(0,0,0,0.35)
     );
+}
+
+.hero-products img:nth-child(1) {
+    width: 210px;
+
+    left: 4%;
+    bottom: 65px;
+
+    z-index: 3;
+}
+
+.hero-products img:nth-child(2) {
+    width: 230px;
+
+    left: 27%;
+    bottom: 48px;
+
+    z-index: 2;
+}
+
+.hero-products img:nth-child(3) {
+    width: 210px;
+
+    right: 9%;
+    bottom: 48px;
+
+    z-index: 1;
+}
+
+.hero-products img:nth-child(4) {
+    width: 190px;
+
+    left: 42%;
+    bottom: 15px;
+
+    z-index: 5;
+}
+
+
+/* ========================================
+   HAUPTBEREICH
+======================================== */
+
+.main-section {
+    background: #ffffff;
+
+    padding: 70px 0;
+}
+
+.main-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 500px;
+
+    gap: 35px;
+
+    align-items: start;
 }
 
 
@@ -261,30 +302,29 @@ textarea {
 ======================================== */
 
 .section-header {
-    max-width: 850px;
-    margin: 0 auto 45px;
+    margin-bottom: 35px;
 }
 
 .section-header span {
     display: block;
-    font-size: 13px;
+
+    font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 3px;
-    color: #222222;
 }
 
 .section-header h2 {
-    font-size: clamp(38px, 5vw, 58px);
-    margin: 7px 0;
-    color: #111111;
+    font-size: clamp(35px, 4vw, 52px);
+
     line-height: 1;
+
+    margin: 8px 0 12px;
 }
 
-.section-header h2 span {
-    display: inline;
-    color: var(--green);
-    font-size: inherit;
-    letter-spacing: normal;
+.section-header strong {
+    color: #aaff00;
 }
 
 .section-header p {
@@ -296,30 +336,29 @@ textarea {
    PRODUKTE
 ======================================== */
 
-.products-section {
-    padding: 90px 0;
-    background: #ffffff;
-}
-
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 14px;
 }
 
-
-/* Produktkarte */
-
 .product-card {
-    background: #fafafa;
+    background: #ffffff;
+
     border: 1px solid #dddddd;
-    border-radius: 12px;
+
+    border-radius: 10px;
+
     overflow: hidden;
+
     transition: 0.25s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+
     border-color: var(--green);
 }
 
@@ -327,145 +366,71 @@ textarea {
 /* Produktbild */
 
 .product-image {
-    height: 255px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 260px;
 
     background: #f7f7f7;
-    position: relative;
-}
-
-
-/* ========================================
-   PRODUKTFORMEN
-======================================== */
-
-.shirt-shape {
-    width: 145px;
-    height: 175px;
-
-    background: #ffffff;
-    color: #111111;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    font-size: 15px;
-    font-weight: 600;
-
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-
-    clip-path: polygon(
-        25% 0,
-        0 15%,
-        15% 35%,
-        27% 25%,
-        27% 100%,
-        73% 100%,
-        73% 25%,
-        85% 35%,
-        100% 15%,
-        75% 0
-    );
+    overflow: hidden;
 }
 
-.hoodie-shape {
-    width: 155px;
-    height: 180px;
+.product-image img {
+    width: 92%;
+    height: 92%;
 
-    background: #222222;
-    color: #ffffff;
+    object-fit: contain;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    border-radius: 20px 20px 9px 9px;
-
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    transition: 0.25s;
 }
 
-.pullover-shape {
-    width: 155px;
-    height: 180px;
-
-    background: #dcdcdc;
-    color: #111111;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    border-radius: 18px;
-
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-.cap-shape {
-    width: 180px;
-    height: 95px;
-
-    background: #222222;
-    color: #ffffff;
-
-    border-radius: 100px 100px 20px 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transform: rotate(-5deg);
-
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+.product-card:hover .product-image img {
+    transform: scale(1.04);
 }
 
 
-/* ========================================
-   PRODUKT INFO
-======================================== */
+/* Produktinformationen */
 
 .product-info {
-    padding: 18px;
+    padding: 17px;
+
     background: #ffffff;
 }
 
 .product-info h3 {
-    font-size: 17px;
+    font-size: 18px;
+
     font-weight: 500;
+
     margin-bottom: 4px;
-    color: #111111;
 }
 
 .product-info p {
     color: #777777;
+
     font-size: 13px;
-    min-height: 35px;
+
+    min-height: 20px;
 }
 
 .product-button {
     width: 100%;
-    margin-top: 14px;
 
-    padding: 12px;
+    margin-top: 13px;
 
-    background: transparent;
-    color: #111111;
+    padding: 11px;
+
+    background: #ffffff;
 
     border: 1px solid #dddddd;
-    border-radius: 8px;
+
+    border-radius: 7px;
 
     cursor: pointer;
+
     font-weight: 600;
 
     transition: 0.2s;
@@ -473,72 +438,113 @@ textarea {
 
 .product-button:hover {
     background: var(--green);
+
     border-color: var(--green);
 }
 
 
 /* ========================================
-   ANFRAGE / FORMULAR
+   FEATURES
 ======================================== */
 
-.custom-section {
-    padding: 80px 0;
-    background: #ffffff;
+.features {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 30px;
+
+    border-top: 1px solid #dddddd;
+
+    padding-top: 28px;
 }
 
-.custom-section .container {
-    display: grid;
-    grid-template-columns: 1fr 520px;
-    gap: 45px;
-    align-items: start;
+.feature {
+    text-align: center;
+
+    padding: 0 10px;
+
+    border-right: 1px solid var(--green);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    color: var(--green);
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.feature h3 {
+    font-size: 11px;
+
+    line-height: 1.3;
+}
+
+.feature p {
+    color: #777777;
+
+    font-size: 10px;
+
+    margin-top: 4px;
 }
 
 
 /* ========================================
-   FORMULAR
+   ANFRAGE
 ======================================== */
 
-.custom-form {
-    width: 100%;
-    max-width: 540px;
+.request-area {
+    position: sticky;
 
-    margin-left: auto;
-
-    background: #0b0b0b;
-    color: #ffffff;
-
-    border: 2px solid var(--green);
-    border-radius: 18px;
-
-    padding: 25px;
-
-    /*
-       DAS IST DER SCROLLBEREICH
-       Wenn das Formular höher wird,
-       kann man innerhalb des Fensters scrollen.
-    */
-
-    max-height: 720px;
-    overflow-y: auto;
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--green) #151515;
+    top: 95px;
 }
 
 
-/* Chrome / Edge Scrollbar */
+/* DAS ANFRAGEFENSTER IST SCROLLBAR */
+
+.custom-form {
+    max-height: 720px;
+
+    overflow-y: auto;
+
+    background: #090909;
+
+    color: #ffffff;
+
+    border: 2px solid var(--green);
+
+    border-radius: 17px;
+
+    padding: 25px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        var(--green)
+        #181818;
+}
+
+
+/* Chrome / Edge */
 
 .custom-form::-webkit-scrollbar {
     width: 8px;
 }
 
 .custom-form::-webkit-scrollbar-track {
-    background: #151515;
+    background: #181818;
+
     border-radius: 10px;
 }
 
 .custom-form::-webkit-scrollbar-thumb {
     background: var(--green);
+
     border-radius: 10px;
 }
 
@@ -552,26 +558,35 @@ textarea {
 ======================================== */
 
 .form-header {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 }
 
 .form-header span {
+    color: var(--green);
+
     font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+}
+
+.form-header h2 {
+    font-size: 31px;
+
+    line-height: 1;
+
+    margin: 7px 0;
+}
+
+.form-header h2 strong {
     color: var(--green);
 }
 
-.form-header h3 {
-    font-size: 29px;
-    margin-top: 5px;
-    color: #ffffff;
-}
+.form-header p {
+    color: #aaaaaa;
 
-.form-header h3 span {
-    color: var(--green);
-    font-size: inherit;
-    letter-spacing: normal;
+    font-size: 13px;
 }
 
 
@@ -580,22 +595,25 @@ textarea {
 ======================================== */
 
 .form-group {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
 }
 
 .form-row {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 14px;
+
+    gap: 13px;
 }
 
 .form-group label {
     display: block;
+
     margin-bottom: 6px;
 
-    font-weight: 700;
     font-size: 12px;
-    color: #ffffff;
+
+    font-weight: 700;
 }
 
 input,
@@ -603,20 +621,17 @@ select,
 textarea {
     width: 100%;
 
-    padding: 12px 13px;
+    padding: 12px;
 
     background: #151515;
-    border: 1px solid #383838;
-    border-radius: 7px;
 
     color: #ffffff;
 
-    outline: none;
-}
+    border: 1px solid #383838;
 
-input::placeholder,
-textarea::placeholder {
-    color: #777777;
+    border-radius: 7px;
+
+    outline: none;
 }
 
 input:focus,
@@ -625,9 +640,15 @@ textarea:focus {
     border-color: var(--green);
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: #777777;
+}
+
 textarea {
     resize: vertical;
-    min-height: 90px;
+
+    min-height: 85px;
 }
 
 
@@ -635,19 +656,28 @@ textarea {
    DATEI
 ======================================== */
 
+#designFile {
+    display: none;
+}
+
 .file-label {
-    display: block;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
     width: 100%;
 
-    padding: 16px;
-
-    border: 1px dashed #555555;
-    border-radius: 8px;
-
-    text-align: left;
-    cursor: pointer;
+    padding: 15px;
 
     background: #151515;
+
+    border: 1px dashed #555555;
+
+    border-radius: 8px;
+
+    cursor: pointer;
 
     transition: 0.2s;
 }
@@ -656,15 +686,18 @@ textarea {
     border-color: var(--green);
 }
 
-#designFile {
-    display: none;
+.file-label small {
+    color: #777777;
+
+    font-size: 11px;
 }
 
-.file-info,
 #fileName {
-    margin-top: 8px;
-    color: #aaaaaa;
-    font-size: 12px;
+    color: #999999;
+
+    font-size: 11px;
+
+    margin-top: 7px;
 }
 
 
@@ -677,31 +710,37 @@ textarea {
 
     padding: 15px;
 
-    border: none;
-    border-radius: 8px;
-
     background: var(--green);
+
     color: #111111;
 
-    font-weight: 800;
-    cursor: pointer;
+    border: none;
+
+    border-radius: 8px;
 
     font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
 
     transition: 0.2s;
 }
 
 .submit-button:hover {
     background: var(--yellow);
+
     transform: translateY(-2px);
 }
 
 .submit-info {
     text-align: center;
-    margin-top: 10px;
 
-    color: #777777;
-    font-size: 11px;
+    color: #666666;
+
+    font-size: 10px;
+
+    margin-top: 10px;
 }
 
 
@@ -711,62 +750,42 @@ textarea {
 
 .contact-section {
     padding: 90px 0;
-    background: #f5f5f5;
+
+    background: #f4f4f4;
+
     text-align: center;
 }
 
 .contact-content {
     max-width: 700px;
+
     margin: auto;
 }
 
 .contact-content span {
-    font-size: 13px;
+    font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 3px;
 }
 
 .contact-content h2 {
-    font-size: 45px;
-    margin: 10px 0;
+    font-size: 43px;
+
+    line-height: 1;
+
+    margin: 10px 0 15px;
+}
+
+.contact-content strong {
+    color: var(--green);
 }
 
 .contact-content p {
     color: #777777;
-    margin-bottom: 30px;
-}
 
-
-/* ========================================
-   FEATURES
-======================================== */
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-
-    padding: 55px 0;
-}
-
-.feature {
-    text-align: center;
-}
-
-.feature-icon {
-    font-size: 35px;
-    color: var(--green);
-    margin-bottom: 8px;
-}
-
-.feature h3 {
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.feature p {
-    color: #777777;
-    font-size: 12px;
+    margin-bottom: 25px;
 }
 
 
@@ -775,31 +794,53 @@ textarea {
 ======================================== */
 
 .footer {
-    background: #090909;
+    background: #080808;
+
     color: #ffffff;
+
     padding-top: 45px;
 }
 
 .footer-content {
     display: flex;
+
     justify-content: space-between;
+
     gap: 30px;
 }
 
+.footer-logo {
+    font-size: 28px;
+
+    font-weight: 900;
+}
+
+.footer-logo span {
+    color: var(--green);
+}
+
 .footer-content p {
-    color: #777777;
-    margin-top: 8px;
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-top: 4px;
 }
 
 .footer-links {
     display: flex;
+
     gap: 25px;
-    flex-wrap: wrap;
+
+    align-items: center;
 }
 
 .footer-links a {
-    color: #aaaaaa;
-    font-size: 14px;
+    color: #999999;
+
+    font-size: 13px;
 }
 
 .footer-links a:hover {
@@ -812,38 +853,30 @@ textarea {
     border-top: 1px solid #222222;
 
     margin-top: 40px;
-    padding: 22px;
+
+    padding: 20px;
 
     color: #666666;
-    font-size: 12px;
+
+    font-size: 11px;
 }
 
 
 /* ========================================
-   HANDY
+   TABLET
 ======================================== */
 
 @media (max-width: 1050px) {
 
-    .custom-section .container {
-        grid-template-columns: 1fr;
-    }
-
-    .custom-form {
-        max-width: 700px;
-        margin: auto;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .hero-content {
         grid-template-columns: 1fr;
+    }
+
+    .hero-text {
         text-align: center;
     }
 
-    .hero p {
+    .hero-description {
         margin-left: auto;
         margin-right: auto;
     }
@@ -852,8 +885,30 @@ textarea {
         justify-content: center;
     }
 
+    .hero-products {
+        height: 330px;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .request-area {
+        position: static;
+    }
+
+    .custom-form {
+        max-width: 650px;
+
+        margin: auto;
+    }
+
 }
 
+
+/* ========================================
+   HANDY
+======================================== */
 
 @media (max-width: 700px) {
 
@@ -862,7 +917,8 @@ textarea {
 
         position: absolute;
 
-        top: 74px;
+        top: 72px;
+
         left: 0;
         right: 0;
 
@@ -892,16 +948,47 @@ textarea {
     }
 
     .hero h1 {
-        font-size: 55px;
-        letter-spacing: -3px;
+        font-size: 58px;
+
+        letter-spacing: -4px;
     }
 
-    .hero-card {
-        min-height: 300px;
+    .hero-products {
+        height: 280px;
+    }
+
+    .hero-products img:nth-child(1) {
+        width: 130px;
+        left: 0;
+    }
+
+    .hero-products img:nth-child(2) {
+        width: 145px;
+        left: 24%;
+    }
+
+    .hero-products img:nth-child(3) {
+        width: 135px;
+        right: 0;
+    }
+
+    .hero-products img:nth-child(4) {
+        width: 125px;
+        left: 37%;
     }
 
     .products-grid {
         grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .feature {
+        border-right: none;
     }
 
     .form-row {
@@ -909,16 +996,17 @@ textarea {
     }
 
     .custom-form {
-        max-height: 600px;
-        padding: 20px;
-    }
+        max-height: 620px;
 
-    .features {
-        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
     }
 
     .footer-content {
         flex-direction: column;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
     }
 
 }
@@ -926,81 +1014,16 @@ textarea {
 
 @media (max-width: 450px) {
 
-    .container {
-        width: 90%;
+    .hero h1 {
+        font-size: 48px;
     }
 
-    .hero h1 {
-        font-size: 47px;
+    .hero-products {
+        height: 240px;
     }
 
     .features {
         grid-template-columns: 1fr;
     }
 
-    .custom-form {
-        max-height: 550px;
-    }
-
-}
-
-/* ========================================
-   PRODUKTBILDER
-======================================== */
-
-.shirt-shape img,
-.hoodie-shape img,
-.pullover-shape img,
-.cap-shape img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-
-/* Produktbilder nicht mehr als Form beschneiden */
-
-.shirt-shape,
-.hoodie-shape,
-.pullover-shape,
-.cap-shape {
-    clip-path: none;
-    box-shadow: none;
-    background: transparent;
-}
-
-
-/* T-Shirt */
-
-.shirt-shape {
-    width: 180px;
-    height: 200px;
-}
-
-
-/* Hoodie */
-
-.hoodie-shape {
-    width: 180px;
-    height: 205px;
-    border-radius: 0;
-}
-
-
-/* Pullover */
-
-.pullover-shape {
-    width: 180px;
-    height: 205px;
-    border-radius: 0;
-}
-
-
-/* Cap */
-
-.cap-shape {
-    width: 190px;
-    height: 150px;
-    transform: none;
 }
