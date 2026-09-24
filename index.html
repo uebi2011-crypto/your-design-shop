@@ -2,66 +2,49 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <title>PRINTX – Dein Design. Unser Druck.</title>
 
-    <title>PrintX – Dein Design. Dein Style.</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 
-<!-- =========================
+<!-- ========================================
      NAVIGATION
-========================= -->
+======================================== -->
 
 <header class="header">
 
     <div class="container nav-container">
 
-        <a
-            href="#home"
-            class="logo">
-
+        <a href="#home" class="logo">
             PRINT<span>X</span>
-
         </a>
-
 
         <nav class="nav-links">
 
-            <a href="#home">
-                Startseite
-            </a>
+            <a href="#home">Home</a>
 
-            <a href="#products">
-                Produkte
-            </a>
+            <a href="#produkte">Produkte</a>
 
-            <a href="#custom">
-                Anfrage
-            </a>
+            <a href="#anfrage">Anfrage</a>
 
-            <a href="mailto:uebi2011@gmail.com">
-                Kontakt
+            <a href="#kontakt">Kontakt</a>
+
+            <a href="#anfrage" class="nav-button">
+                Anfrage senden
             </a>
 
         </nav>
 
-
         <button
             class="menu-button"
-            onclick="toggleMenu()">
+            onclick="toggleMenu()"
+            aria-label="Menü öffnen">
 
             ☰
 
@@ -73,37 +56,37 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      HERO
-========================= -->
+======================================== -->
 
-<section
-    id="home"
-    class="hero">
+<section class="hero" id="home">
 
     <div class="container hero-content">
 
+
         <div class="hero-text">
 
-            <span class="hero-small">
-                PRINTX CUSTOM
-            </span>
+            <p class="hero-small">
+                DEIN DESIGN. UNSER DRUCK.
+            </p>
 
             <h1>
-                DEIN DESIGN.
-                <br>
-                DEIN STYLE.
+                PRINT<span>X</span>
             </h1>
 
-            <p>
-                Wir bedrucken T-Shirts, Hoodies, Caps
-                und mehr nach deinen Vorstellungen.
+            <p class="hero-description">
+
+                Individuelle Textilien mit deinem eigenen Design.
+                Ob T-Shirt, Hoodie, Pullover oder Cap –
+                bei uns wird deine Idee Realität.
+
             </p>
 
             <div class="hero-buttons">
 
                 <a
-                    href="#custom"
+                    href="#anfrage"
                     class="button primary">
 
                     Jetzt anfragen →
@@ -111,7 +94,7 @@
                 </a>
 
                 <a
-                    href="#products"
+                    href="#produkte"
                     class="button secondary">
 
                     Produkte ansehen
@@ -123,15 +106,24 @@
         </div>
 
 
-        <div class="hero-visual">
 
-            <div class="hero-card">
+        <div class="hero-products">
 
-                <div class="hero-shirt">
-                    PRINTX
-                </div>
+            <img
+                src="images/tshirt.png"
+                alt="PRINTX T-Shirt">
 
-            </div>
+            <img
+                src="images/hoodie.png"
+                alt="PRINTX Hoodie">
+
+            <img
+                src="images/pullover.png"
+                alt="PRINTX Pullover">
+
+            <img
+                src="images/cap.png"
+                alt="PRINTX Cap">
 
         </div>
 
@@ -141,288 +133,348 @@
 
 
 
-<!-- =========================
-     PRODUKTE
-========================= -->
+<!-- ========================================
+     PRODUKTE + ANFRAGE
+======================================== -->
 
-<section
-    id="products"
-    class="products-section">
+<section class="main-section">
 
-    <div class="container">
+    <div class="container main-layout">
 
-        <div class="section-header">
 
-            <span>
-                PRINTX COLLECTION
-            </span>
+        <!-- ==================================
+             PRODUKTE
+        ================================== -->
 
-            <h2>
-                Unsere Produkte
-            </h2>
+        <div
+            class="products-area"
+            id="produkte">
 
-            <p>
-                Wähle dein Produkt und sende uns
-                deine individuelle Anfrage.
-            </p>
-
-        </div>
-
-
-        <div class="products-grid">
-
-
-            <!-- T-SHIRT -->
-
-            <div class="product-card">
-
-                <div class="product-image tshirt-image">
-
-                    <div class="shirt-shape">
-                        PRINTX
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        T-Shirt
-                    </h3>
-
-                    <p>
-                        Dein individuelles T-Shirt
-                        mit deinem eigenen Design.
-                    </p>
-
-                    <button
-                        class="product-button"
-                        onclick="selectProduct('T-Shirt')">
-
-                        T-Shirt auswählen →
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- HOODIE -->
-
-            <div class="product-card">
-
-                <div class="product-image hoodie-image">
-
-                    <div class="hoodie-shape">
-                        PRINTX
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Hoodie
-                    </h3>
-
-                    <p>
-                        Bequemer Hoodie mit deinem
-                        persönlichen Druck.
-                    </p>
-
-                    <button
-                        class="product-button"
-                        onclick="selectProduct('Hoodie')">
-
-                        Hoodie auswählen →
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CAP -->
-
-            <div class="product-card">
-
-                <div class="product-image cap-image">
-
-                    <div class="cap-shape">
-                        PRINTX
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Cap
-                    </h3>
-
-                    <p>
-                        Deine individuelle Cap
-                        mit eigenem Logo oder Design.
-                    </p>
-
-                    <button
-                        class="product-button"
-                        onclick="selectProduct('Cap')">
-
-                        Cap auswählen →
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- PULLOVER -->
-
-            <div class="product-card">
-
-                <div class="product-image pullover-image">
-
-                    <div class="pullover-shape">
-                        PRINTX
-                    </div>
-
-                </div>
-
-                <div class="product-info">
-
-                    <h3>
-                        Pullover
-                    </h3>
-
-                    <p>
-                        Individueller Pullover
-                        für deinen eigenen Style.
-                    </p>
-
-                    <button
-                        class="product-button"
-                        onclick="selectProduct('Pullover')">
-
-                        Pullover auswählen →
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ANFRAGE
-========================= -->
-
-<section
-    id="custom"
-    class="custom-section">
-
-    <div class="container">
-
-
-        <div class="section-header">
-
-            <span>
-                PRINTX CUSTOM
-            </span>
-
-            <h2>
-                Deine Anfrage
-            </h2>
-
-            <p>
-                Fülle das Formular aus und wir melden
-                uns anschließend per E-Mail bei dir.
-            </p>
-
-        </div>
-
-
-
-        <div class="custom-form">
-
-
-            <div class="form-header">
+            <div class="section-header">
 
                 <span>
-                    PRINTX CUSTOM
+                    UNSERE PRODUKTE
                 </span>
 
-                <h3>
-                    Anfrage erstellen
-                </h3>
+                <h2>
+                    WÄHLE DEIN
+                    <strong>PRODUKT</strong>
+                </h2>
+
+                <p>
+                    Wähle dein gewünschtes Produkt
+                    und sende uns deine Anfrage.
+                </p>
 
             </div>
 
 
 
-            <!-- FORMULAR -->
+            <div class="products-grid">
+
+
+                <!-- T-SHIRT -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/tshirt.png"
+                            alt="PRINTX T-Shirt">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            T-Shirt
+                        </h3>
+
+                        <p>
+                            Perfekt für jeden Anlass.
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="selectProduct('T-Shirt')">
+
+                            Auswählen →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HOODIE -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/hoodie.png"
+                            alt="PRINTX Hoodie">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Hoodie
+                        </h3>
+
+                        <p>
+                            Bequem und stylisch.
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="selectProduct('Hoodie')">
+
+                            Auswählen →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PULLOVER -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/pullover.png"
+                            alt="PRINTX Pullover">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Pullover
+                        </h3>
+
+                        <p>
+                            Für kühle Tage.
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="selectProduct('Pullover')">
+
+                            Auswählen →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CAP -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/cap.png"
+                            alt="PRINTX Cap">
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Cap
+                        </h3>
+
+                        <p>
+                            Dein Style. Deine Cap.
+                        </p>
+
+                        <button
+                            class="product-button"
+                            onclick="selectProduct('Cap')">
+
+                            Auswählen →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURES -->
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ◆
+                    </div>
+
+                    <h3>
+                        HOCHWERTIGE
+                        DRUCKQUALITÄT
+                    </h3>
+
+                    <p>
+                        Langlebig & brillant
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🚚
+                    </div>
+
+                    <h3>
+                        SCHNELLER
+                        SERVICE
+                    </h3>
+
+                    <p>
+                        Zuverlässig & pünktlich
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        EINFACHE
+                        ANFRAGE
+                    </h3>
+
+                    <p>
+                        In wenigen Klicks
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ♢
+                    </div>
+
+                    <h3>
+                        NACHHALTIG
+                        PRODUZIERT
+                    </h3>
+
+                    <p>
+                        Für eine bessere Zukunft
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==================================
+             ANFRAGE
+        ================================== -->
+
+        <div
+            class="request-area"
+            id="anfrage">
+
 
             <form
                 id="orderForm"
+                class="custom-form"
                 onsubmit="submitOrder(event)">
 
 
-                <!-- PRODUKT -->
+                <div class="form-header">
 
-                <div class="form-group">
+                    <span>
+                        DEINE ANFRAGE
+                    </span>
 
-                    <label for="product">
-                        Produkt
-                    </label>
+                    <h2>
+                        Anfrage
+                        <strong>senden</strong>
+                    </h2>
 
-                    <select
-                        id="product"
-                        name="product"
-                        required>
-
-                        <option value="">
-                            Bitte auswählen
-                        </option>
-
-                        <option value="T-Shirt">
-                            T-Shirt
-                        </option>
-
-                        <option value="Hoodie">
-                            Hoodie
-                        </option>
-
-                        <option value="Cap">
-                            Cap
-                        </option>
-
-                        <option value="Pullover">
-                            Pullover
-                        </option>
-
-                    </select>
+                    <p>
+                        Wähle dein Produkt, die Farbe,
+                        Größe und Druckposition.
+                    </p>
 
                 </div>
 
 
 
-                <!-- FARBE -->
+                <!-- PRODUKT + FARBE -->
 
                 <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="product">
+                            Produkt
+                        </label>
+
+                        <select
+                            id="product"
+                            required>
+
+                            <option value="">
+                                Produkt wählen
+                            </option>
+
+                            <option value="T-Shirt">
+                                T-Shirt
+                            </option>
+
+                            <option value="Hoodie">
+                                Hoodie
+                            </option>
+
+                            <option value="Pullover">
+                                Pullover
+                            </option>
+
+                            <option value="Cap">
+                                Cap
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
 
                     <div class="form-group">
 
@@ -432,11 +484,10 @@
 
                         <select
                             id="color"
-                            name="color"
                             required>
 
                             <option value="">
-                                Bitte auswählen
+                                Farbe wählen
                             </option>
 
                             <option value="Schwarz">
@@ -451,25 +502,26 @@
                                 Grau
                             </option>
 
-                            <option value="Rot">
-                                Rot
-                            </option>
-
-                            <option value="Blau">
-                                Blau
-                            </option>
-
                             <option value="Grün">
                                 Grün
+                            </option>
+
+                            <option value="Gelb">
+                                Gelb
                             </option>
 
                         </select>
 
                     </div>
 
+                </div>
 
 
-                    <!-- GRÖSSE -->
+
+                <!-- GRÖSSE + POSITION -->
+
+                <div class="form-row">
+
 
                     <div class="form-group">
 
@@ -479,11 +531,10 @@
 
                         <select
                             id="size"
-                            name="size"
                             required>
 
                             <option value="">
-                                Bitte auswählen
+                                Größe wählen
                             </option>
 
                             <option value="XS">
@@ -510,36 +561,29 @@
                                 XXL
                             </option>
 
-                            <option value="Keine Größe / Cap">
-                                Keine Größe / Cap
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="position">
+                            Druckposition
+                        </label>
+
+                        <select
+                            id="position"
+                            required>
+
+                            <option value="">
+                                Erst Produkt auswählen
                             </option>
 
                         </select>
 
                     </div>
-
-                </div>
-
-
-
-                <!-- DRUCKPOSITION -->
-
-                <div class="form-group">
-
-                    <label for="position">
-                        Druckposition
-                    </label>
-
-                    <select
-                        id="position"
-                        name="position"
-                        required>
-
-                        <option value="">
-                            Erst Produkt auswählen
-                        </option>
-
-                    </select>
 
                 </div>
 
@@ -556,9 +600,8 @@
                     <input
                         type="number"
                         id="quantity"
-                        name="quantity"
-                        min="1"
                         value="1"
+                        min="1"
                         required>
 
                 </div>
@@ -567,12 +610,7 @@
 
                 <!-- DATEI -->
 
-                <div class="form-group file-group">
-
-                    <label>
-                        Design / Logo
-                    </label>
-
+                <div class="form-group">
 
                     <label
                         for="designFile"
@@ -580,8 +618,12 @@
 
                         📎 Datei im E-Mail-Fenster anfügen
 
-                    </label>
+                        <small>
+                            Optional – Design später
+                            im E-Mail-Fenster anhängen
+                        </small>
 
+                    </label>
 
                     <input
                         type="file"
@@ -589,64 +631,48 @@
                         accept=".png,.jpg,.jpeg,.svg,.pdf"
                         onchange="showFileName()">
 
-
-                    <p
-                        id="fileName"
-                        class="file-info">
-
-                        Optional – du kannst auch
-                        ohne Datei fortfahren.
-
-                    </p>
-
-
-                    <p class="file-hint">
-
-                        Die Datei wird nicht automatisch
-                        angehängt. Nachdem du auf
-                        „Anfrage absenden“ klickst,
-                        musst du sie im E-Mail-Fenster
-                        selbst als Anhang hinzufügen.
-
+                    <p id="fileName">
+                        Optional – du kannst auch ohne Datei fortfahren.
                     </p>
 
                 </div>
 
 
 
-                <!-- NAME -->
+                <!-- NAME + E-MAIL -->
 
-                <div class="form-group">
-
-                    <label for="name">
-                        Dein Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Max Mustermann"
-                        required>
-
-                </div>
+                <div class="form-row">
 
 
+                    <div class="form-group">
 
-                <!-- E-MAIL -->
+                        <label for="name">
+                            Name
+                        </label>
 
-                <div class="form-group">
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Dein Name"
+                            required>
 
-                    <label for="email">
-                        Deine E-Mail
-                    </label>
+                    </div>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="deine@email.at"
-                        required>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-Mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Deine E-Mail"
+                            required>
+
+                    </div>
 
                 </div>
 
@@ -662,21 +688,20 @@
 
                     <textarea
                         id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Beschreibe dein gewünschtes Design..."></textarea>
+                        rows="4"
+                        placeholder="Deine Nachricht (optional)"></textarea>
 
                 </div>
 
 
 
-                <!-- BUTTON -->
+                <!-- ABSENDEN -->
 
                 <button
                     type="submit"
                     class="submit-button">
 
-                    Anfrage absenden →
+                    ✉ Anfrage absenden →
 
                 </button>
 
@@ -684,11 +709,9 @@
                 <p class="submit-info">
 
                     Beim Absenden öffnet sich dein
-                    E-Mail-Programm mit allen
-                    Bestelldaten.
+                    E-Mail-Programm.
 
                 </p>
-
 
             </form>
 
@@ -700,32 +723,36 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      KONTAKT
-========================= -->
+======================================== -->
 
-<section class="contact-section">
+<section
+    class="contact-section"
+    id="kontakt">
 
     <div class="container contact-content">
 
         <span>
-            NOCH FRAGEN?
+            KONTAKT
         </span>
 
         <h2>
-            Schreib uns direkt.
+            DEINE IDEE.
+            <strong>DEIN PRINTX.</strong>
         </h2>
 
         <p>
-            Wir beantworten deine Anfrage
-            so schnell wie möglich.
+            Du hast Fragen oder möchtest ein
+            individuelles Design erstellen?
+            Schreib uns einfach.
         </p>
 
         <a
             href="mailto:uebi2011@gmail.com"
             class="button primary">
 
-            📧 E-Mail schreiben
+            E-Mail schreiben →
 
         </a>
 
@@ -735,9 +762,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      FOOTER
-========================= -->
+======================================== -->
 
 <footer class="footer">
 
@@ -745,12 +772,12 @@
 
         <div>
 
-            <div class="logo">
+            <div class="footer-logo">
                 PRINT<span>X</span>
             </div>
 
             <p>
-                Dein Design. Dein Style.
+                MORE THAN JUST PRINT.
             </p>
 
         </div>
@@ -759,18 +786,18 @@
         <div class="footer-links">
 
             <a href="#home">
-                Startseite
+                Home
             </a>
 
-            <a href="#products">
+            <a href="#produkte">
                 Produkte
             </a>
 
-            <a href="#custom">
+            <a href="#anfrage">
                 Anfrage
             </a>
 
-            <a href="mailto:uebi2011@gmail.com">
+            <a href="#kontakt">
                 Kontakt
             </a>
 
@@ -781,7 +808,7 @@
 
     <div class="footer-bottom">
 
-        © 2026 PrintX. Alle Rechte vorbehalten.
+        © 2026 PRINTX – Alle Rechte vorbehalten.
 
     </div>
 
@@ -794,4 +821,3 @@
 </body>
 
 </html>
-   
