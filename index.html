@@ -12,10 +12,9 @@
 
 <body>
 
-
-<!-- ========================================
+<!-- ================================
      NAVIGATION
-======================================== -->
+================================ -->
 
 <header class="header">
 
@@ -43,11 +42,8 @@
 
         <button
             class="menu-button"
-            onclick="toggleMenu()"
-            aria-label="Menü öffnen">
-
+            onclick="toggleMenu()">
             ☰
-
         </button>
 
     </div>
@@ -55,15 +51,13 @@
 </header>
 
 
-
-<!-- ========================================
+<!-- ================================
      HERO
-======================================== -->
+================================ -->
 
 <section class="hero" id="home">
 
     <div class="container hero-content">
-
 
         <div class="hero-text">
 
@@ -76,11 +70,9 @@
             </h1>
 
             <p class="hero-description">
-
                 Individuelle Textilien mit deinem eigenen Design.
                 Ob T-Shirt, Hoodie, Pullover oder Cap –
                 bei uns wird deine Idee Realität.
-
             </p>
 
             <div class="hero-buttons">
@@ -88,17 +80,13 @@
                 <a
                     href="#anfrage"
                     class="button primary">
-
                     Jetzt anfragen →
-
                 </a>
 
                 <a
                     href="#produkte"
                     class="button secondary">
-
                     Produkte ansehen
-
                 </a>
 
             </div>
@@ -106,6 +94,7 @@
         </div>
 
 
+        <!-- HERO PRODUKTBILDER -->
 
         <div class="hero-products">
 
@@ -132,19 +121,18 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- ================================
      PRODUKTE + ANFRAGE
-======================================== -->
+================================ -->
 
 <section class="main-section">
 
     <div class="container main-layout">
 
 
-        <!-- ==================================
+        <!-- ============================
              PRODUKTE
-        ================================== -->
+        ============================= -->
 
         <div
             class="products-area"
@@ -169,7 +157,6 @@
             </div>
 
 
-
             <div class="products-grid">
 
 
@@ -180,16 +167,14 @@
                     <div class="product-image">
 
                         <img
-                            src="images/tshirt.png"
+                            src="tshirt.png"
                             alt="PRINTX T-Shirt">
 
                     </div>
 
                     <div class="product-info">
 
-                        <h3>
-                            T-Shirt
-                        </h3>
+                        <h3>T-Shirt</h3>
 
                         <p>
                             Perfekt für jeden Anlass.
@@ -208,7 +193,6 @@
                 </div>
 
 
-
                 <!-- HOODIE -->
 
                 <div class="product-card">
@@ -216,16 +200,14 @@
                     <div class="product-image">
 
                         <img
-                            src="images/hoodie.png"
+                            src="hoodie.png"
                             alt="PRINTX Hoodie">
 
                     </div>
 
                     <div class="product-info">
 
-                        <h3>
-                            Hoodie
-                        </h3>
+                        <h3>Hoodie</h3>
 
                         <p>
                             Bequem und stylisch.
@@ -244,7 +226,6 @@
                 </div>
 
 
-
                 <!-- PULLOVER -->
 
                 <div class="product-card">
@@ -252,16 +233,14 @@
                     <div class="product-image">
 
                         <img
-                            src="images/pullover.png"
+                            src="pullover.png"
                             alt="PRINTX Pullover">
 
                     </div>
 
                     <div class="product-info">
 
-                        <h3>
-                            Pullover
-                        </h3>
+                        <h3>Pullover</h3>
 
                         <p>
                             Für kühle Tage.
@@ -280,7 +259,6 @@
                 </div>
 
 
-
                 <!-- CAP -->
 
                 <div class="product-card">
@@ -288,16 +266,14 @@
                     <div class="product-image">
 
                         <img
-                            src="images/cap.png"
+                            src="cap.png"
                             alt="PRINTX Cap">
 
                     </div>
 
                     <div class="product-info">
 
-                        <h3>
-                            Cap
-                        </h3>
+                        <h3>Cap</h3>
 
                         <p>
                             Dein Style. Deine Cap.
@@ -318,16 +294,13 @@
             </div>
 
 
-
             <!-- FEATURES -->
 
             <div class="features">
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        ◆
-                    </div>
+                    <div class="feature-icon">◆</div>
 
                     <h3>
                         HOCHWERTIGE
@@ -343,9 +316,7 @@
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        🚚
-                    </div>
+                    <div class="feature-icon">🚚</div>
 
                     <h3>
                         SCHNELLER
@@ -361,9 +332,7 @@
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        ✓
-                    </div>
+                    <div class="feature-icon">✓</div>
 
                     <h3>
                         EINFACHE
@@ -379,9 +348,7 @@
 
                 <div class="feature">
 
-                    <div class="feature-icon">
-                        ♢
-                    </div>
+                    <div class="feature-icon">♢</div>
 
                     <h3>
                         NACHHALTIG
@@ -399,21 +366,18 @@
         </div>
 
 
-
-        <!-- ==================================
+        <!-- ============================
              ANFRAGE
-        ================================== -->
+        ============================= -->
 
         <div
             class="request-area"
             id="anfrage">
 
-
             <form
                 id="orderForm"
                 class="custom-form"
                 onsubmit="submitOrder(event)">
-
 
                 <div class="form-header">
 
@@ -427,18 +391,16 @@
                     </h2>
 
                     <p>
-                        Wähle dein Produkt, die Farbe,
-                        Größe und Druckposition.
+                        Wähle dein Produkt und
+                        gib deine Wünsche an.
                     </p>
 
                 </div>
 
 
-
                 <!-- PRODUKT + FARBE -->
 
                 <div class="form-row">
-
 
                     <div class="form-group">
 
@@ -473,7 +435,6 @@
                         </select>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -517,11 +478,9 @@
                 </div>
 
 
-
                 <!-- GRÖSSE + POSITION -->
 
                 <div class="form-row">
-
 
                     <div class="form-group">
 
@@ -537,34 +496,16 @@
                                 Größe wählen
                             </option>
 
-                            <option value="XS">
-                                XS
-                            </option>
-
-                            <option value="S">
-                                S
-                            </option>
-
-                            <option value="M">
-                                M
-                            </option>
-
-                            <option value="L">
-                                L
-                            </option>
-
-                            <option value="XL">
-                                XL
-                            </option>
-
-                            <option value="XXL">
-                                XXL
-                            </option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
 
                         </select>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -588,7 +529,6 @@
                 </div>
 
 
-
                 <!-- ANZAHL -->
 
                 <div class="form-group">
@@ -600,12 +540,11 @@
                     <input
                         type="number"
                         id="quantity"
-                        value="1"
                         min="1"
+                        value="1"
                         required>
 
                 </div>
-
 
 
                 <!-- DATEI -->
@@ -632,17 +571,16 @@
                         onchange="showFileName()">
 
                     <p id="fileName">
-                        Optional – du kannst auch ohne Datei fortfahren.
+                        Optional – du kannst auch ohne
+                        Datei fortfahren.
                     </p>
 
                 </div>
 
 
-
-                <!-- NAME + E-MAIL -->
+                <!-- NAME + EMAIL -->
 
                 <div class="form-row">
-
 
                     <div class="form-group">
 
@@ -657,7 +595,6 @@
                             required>
 
                     </div>
-
 
 
                     <div class="form-group">
@@ -677,7 +614,6 @@
                 </div>
 
 
-
                 <!-- NACHRICHT -->
 
                 <div class="form-group">
@@ -694,7 +630,6 @@
                 </div>
 
 
-
                 <!-- ABSENDEN -->
 
                 <button
@@ -705,12 +640,9 @@
 
                 </button>
 
-
                 <p class="submit-info">
-
                     Beim Absenden öffnet sich dein
                     E-Mail-Programm.
-
                 </p>
 
             </form>
@@ -722,10 +654,9 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- ================================
      KONTAKT
-======================================== -->
+================================ -->
 
 <section
     class="contact-section"
@@ -761,10 +692,9 @@
 </section>
 
 
-
-<!-- ========================================
+<!-- ================================
      FOOTER
-======================================== -->
+================================ -->
 
 <footer class="footer">
 
@@ -785,21 +715,10 @@
 
         <div class="footer-links">
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#produkte">
-                Produkte
-            </a>
-
-            <a href="#anfrage">
-                Anfrage
-            </a>
-
-            <a href="#kontakt">
-                Kontakt
-            </a>
+            <a href="#home">Home</a>
+            <a href="#produkte">Produkte</a>
+            <a href="#anfrage">Anfrage</a>
+            <a href="#kontakt">Kontakt</a>
 
         </div>
 
@@ -815,9 +734,9 @@
 </footer>
 
 
-
 <script src="script.js"></script>
 
 </body>
 
 </html>
+    
